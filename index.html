@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+    <link href="lib/ionic-ion-tinder-cards/ionic.tdcards.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/collide/collide.js"></script>
+    <script src="lib/ionic-ion-tinder-cards/ionic.tdcards.js"></script>
+    <script src="lib/lodash/lodash.js"></script>
+    <script src="lib/restangular/src/restangular.js"></script>
+    <script src="lib/cloudinary-core/cloudinary-core.js"></script>
+    <script src="lib/cloudinary_ng/js/angular.cloudinary.js"></script>
+    <script src="lib/q/q.js"></script>
+    <script src="lib/q/queue.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.8.1/js/dropin.min.js"></script>
+
+    <!--------  zoom -------->
+    <link rel="stylesheet" href="lib/zoom/photoswipe.css">
+    <link rel="stylesheet" href="lib/zoom/default-skin/default-skin.css">
+    <script src="lib/zoom/photoswipe.js"></script>
+    <script src="lib/zoom/photoswipe-ui-default.js"></script>
+
+    <!--------  zoom -------->
+      <!-- if use wakanda platform-->
+      <!--    <script src="lib/angular-wakanda/angular-wakanda.min.js"></script>-->
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/dataService.js"></script>
+      <script src="js/loader.js"></script>
+    <script src="js/actionSheet.js"></script>
+  </head>
+
+  <body ng-app="starter" id="MyApp" class="platform-ios">
+    <ion-nav-view>
+
+         <div class="pswp" tabindex="-1" role="dialog" aria-hidden="!PhotoSwipe">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                   <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)">
+
+                    </button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+              </div>
+            </div>
+    </div>
+
+
+    </ion-nav-view>
+  </body>
+</html>
+
