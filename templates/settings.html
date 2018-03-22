@@ -1,0 +1,111 @@
+<ion-view view-title="SETTINGS" >
+  <ion-content>
+
+    <div class="profile_det padding">
+      <ion-list>
+        <ion-item class="item-icon-left">
+          <div class="row">
+            <div class="col col-50 item_text" ng-click="openChangeNameModal()">
+              <i class="icon ion-person main-text-color"></i>Change Name
+            </div>
+            <!--<div class="col col-50 item_no">-->
+            <!--<span class="no-item main-text-color">5</span>items-->
+            <!--</div>-->
+          </div>
+        </ion-item>
+        <ion-item class="item-icon-left">
+          <div class="row">
+            <!-- <div class="col col-50 item_text" > -->
+            <div class="col col-50 item_text" ng-click="openChangeEmailModal()">
+              <i class="icon ion-email main-text-color"></i>Change Email
+            </div>
+            <!--<div class="col col-50 item_no">-->
+            <!--<span class="no-item main-text-color">6</span>items-->
+            <!--</div>-->
+          </div>
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="openChangePhoneModal()">
+          <i class="icon ion-ios-telephone main-text-color" ></i> Add Phone Number
+        </ion-item>
+
+        <ion-item class="item-icon-left" ng-click="openCodeVerifyModal()">
+          <i class="icon ion-trash-a main-text-color" ></i>  Delete Account
+        </ion-item>
+
+
+        <!--<ion-item class="item-icon-left"  ng-click="goto('/app/payment')">-->
+        <!--<i class="icon ion-home main-text-color"></i>ADDRESS INFO-->
+        <!--</ion-item>-->
+        <!--<ion-item class="item-icon-left"  ng-click="goto('/app/payment')">-->
+        <!--<i class="icon ion-card main-text-color"></i>PAYMENT INFO-->
+        <!--</ion-item>-->
+
+        <div class="card" style=" padding: 2px ">
+          <div class="item item-text-wrap">
+            <div class="row">
+              <div class="col-80"> Maximum Distance </div>
+              <div class="col-20">{{range}}Km</div>
+            </div>
+
+
+            <div class="item range  range-positive">
+
+              <input type="range" name="volume" min="5" max="150" ng-model="range" on-touch="rangeslide(range)">
+
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+      </ion-list>
+    </div>
+
+
+    <!--<div class="list">-->
+      <!--<a class="item item-icon-left" ng-click="openChangeNameModal()">-->
+        <!--<i class="icon ion-person"></i>-->
+       <!--Change Name-->
+      <!--</a>-->
+
+      <!--<a class="item item-icon-left" href="#">-->
+        <!--<i class="icon ion-email"></i>-->
+        <!--Change Email-->
+      <!--</a>-->
+
+      <!--<a class="item item-icon-left" ng-click="openChangePhoneModal()">-->
+        <!--<i class="icon ion-ios-telephone"></i>-->
+        <!--Add Phone Number-->
+      <!--</a>-->
+
+      <!--<a class="item item-icon-left" ng-click="openCodeVerifyModal()">-->
+        <!--<i class="icon ion-trash-a"></i>-->
+       <!--Delete Account-->
+
+      <!--</a>-->
+
+
+
+
+
+
+
+
+
+
+    <!--</div>-->
+
+
+    <!--<div class="cart_main_btn">-->
+      <!--<button class="button button-block main-bg-color main-btn">-->
+        <!--EMPTY CART-->
+      <!--</button>-->
+      <!--<button class="button button-block main-btn" ng-click="goto('/app/payment')">-->
+        <!--SAVE COMPLETE ORDER-->
+      <!--</button>-->
+    <!--</div>-->
+  </ion-content>
+</ion-view>

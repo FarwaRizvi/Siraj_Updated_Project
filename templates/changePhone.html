@@ -1,0 +1,75 @@
+<ion-modal-view class="update_modal Update_Modals">
+
+  <ion-header-bar class="modal_head">
+    <div class="row sorted">
+      <div class="col col-80 col-search">
+        <!--<div class="row search">-->
+        <!--<div class="col col-20">-->
+        <!--<button class="button button-clear button-icon">-->
+        <!--<i class="ion-search  main-text-color"></i>-->
+        <!--</button>-->
+        <!--</div>-->
+        <!--<div class="col col-80">-->
+        <!--<label class="item item-input">-->
+        <!--<input type="text" placeholder="Search">-->
+        <!--</label>-->
+        <!--</div>-->
+        <!--</div>-->
+      </div>
+      <div class="col col-20">
+        <span class="close-icon" ng-click="closePhnModal()"><i class="icon ion-android-close main2-text-color"></i></span>
+      </div>
+      <!--<div class="col col-80 col-search">-->
+      <!--<div class="row search">-->
+      <!--<div class="col col-20">-->
+      <!--<button class="button button-clear button-icon">-->
+      <!--<i class="ion-search  main-text-color"></i>-->
+      <!--</button>-->
+      <!--</div>-->
+      <!--<div class="col col-80">-->
+      <!--<label class="item item-input">-->
+      <!--<input type="text" placeholder="Search">-->
+      <!--</label>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--</div>-->
+    </div>
+  </ion-header-bar>
+
+  <ion-content class="register_content content_position" scroll="false">
+
+
+    <div class="form animated slideInUp">
+      <label class="item item-input">
+        <b>+92&nbsp;-&nbsp;</b><input type="number" style="font-size:16px;" placeholder="Phone Number" ng-model="ChangeNumber">
+      </label>
+    </div>
+
+    <a class="button button-block main-btn" ng-click="closeChangePhoneModal(ChangeNumber)">Done</a>
+
+
+  </ion-content>
+
+
+  <!--<ion-content class="register_content main_bg content_position" style="background-image: none;">-->
+
+
+    <!--<div class="list list-inset">-->
+
+      <!--<div class="form animated slideInUp">-->
+      <!--<label class="item item-input">-->
+        <!--+92-<input type="number" placeholder="Phone Number" ng-model="phonenumber">-->
+      <!--</label>-->
+      <!--</div>-->
+
+    <!--</div>-->
+
+    <!--<ion-footer-bar class="footer modal_footer">-->
+      <!--<button class="button button-block main-btn" ng-click="closeChangePhoneModal(phonenumber)">-->
+        <!--ADD PHONE-->
+      <!--</button>-->
+    <!--</ion-footer-bar>-->
+
+  <!--</ion-content>-->
+
+</ion-modal-view>

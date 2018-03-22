@@ -1,0 +1,91 @@
+<ion-view title="NEARY BY">
+  <ion-content class="signin_content register_content content_position" scroll="false" ">
+
+  <div class="card" ng-show="noProduct" style="margin-top: 50%; text-align: center">
+    <div class="item item-text-wrap">
+      There's nothing new around you.
+    </div>
+  </div>
+
+  <div class="form-app animated slideInUp" style="height: 90%">
+    <td-cards>
+      <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index,card._id)" on-swipe-right="cardSwipedRight($index,card._id)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+
+        <div class="card " ng-click="goto('/app/details/'+card._id)" style=" box-shadow: 0px 2px 3px black;">
+
+          <div class="item " style="padding: 5px;">
+
+            <!--<h2>Pretty H</h2>-->
+            <p style="text-align: center ; ">{{card.product_name | uppercase}}</p>
+          </div>
+
+          <div class="item item-image thumbnailNear">
+            <img src="{{card.imagesPath[0]}}" style="padding: 5px" >
+            <!--<div class="ribbon">-->
+              <!--<div class="txt">Featured</div>-->
+            <!--</div>--> <div class="no-text" ng-click="nope($index)">NOPE</div>
+            <!--<img ng-src="{{card.imagesPath[0]}}">-->
+            <div class="yes-text" ng-click="like($index)">LIKE</div>
+          </div>
+
+
+
+          <a class="item  assertive" >
+            <i class="icon ion-cash"></i>
+            {{card.product_price}}
+            <div style="float: right;">{{getDistanceFromLatLonInKm(latitude,longitude,card.product_latitude,card.product_longitude)}} Km Away</div>
+          </a>
+          <!--<div class="nisrs">-->
+            <!--<div class="row">-->
+              <!--<div class="col-25">-->
+
+              <!--</div>-->
+              <!--<div class="col-25">-->
+                <!--<button class="button button-outline button-assertive" ng-click="nope($index)">-->
+                  <!--NOPE-->
+                <!--</button>-->
+              <!--</div>-->
+              <!--<div class="col-25">-->
+                <!--<button class="button button-outline button-balanced" ng-click="like($index)">-->
+                  <!--LIKE-->
+                <!--</button>-->
+              <!--</div>-->
+              <!--<div class="col-25">-->
+
+              <!--</div>-->
+
+            <!--</div>-->
+
+
+
+
+
+          <!--</div>-->
+        </div>
+
+
+
+
+
+
+        <!--<div class="image" >-->
+
+        <!--</div>-->
+      </td-card>
+
+    </td-cards>
+
+
+  </div>
+
+
+
+
+
+
+
+
+</ion-content>
+</ion-view>
+
+

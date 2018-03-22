@@ -1,0 +1,22 @@
+<ion-modal-view class="update_modal Update_Modals">
+
+  <ion-header-bar class="modal_head">
+    <div class="row sorted">
+      <div class="col col-80 col-search"></div>
+      <div class="col col-20">
+        <span class="close-icon" ng-click="closeChangeEmailModal()"><i class="icon ion-android-close main2-text-color"></i></span>
+      </div>
+    </div>
+  </ion-header-bar>
+
+  <ion-content scroll="false">
+    <div class="list list-inset" style="margin: 0px;">
+      <label class="item item-input">
+        <input type="Email" placeholder="Email" ng-model="email">
+      </label>
+
+      <a class="button button-block main-btn" ng-click="closeChangeEmailModal(email)">Update</a>
+    </div>
+  </ion-content>
+
+</ion-modal-view>

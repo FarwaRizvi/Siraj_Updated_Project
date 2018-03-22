@@ -1,0 +1,23 @@
+<ion-view view-title="Inbox">
+
+  <ion-content class="Inbox_content">
+
+    <ion-list class="cart_list inbox_list">
+	    <ion-item ng-repeat="thread in InboxData" ng-click="goto('/app/messages')" style="height:85px;padding:3px;border-bottom:2px solid #3f51b526;">
+	        <div class="row cart_content" ng-click="OpenMessages(thread)" ng-href="/messages.html" on-hold="delete(thread.unique_name)">
+	          <div class="item_cart_img animated zoomIn" style="width:72px; border-radius:50%;overflow:hidden;margin:-3px 0px -3px 0px !important;">
+	          	<img style="width:74px;" src="../img/user.png" />
+	          </div>
+
+	          <div class="col col-mid" style="padding:0px!important; margin:0px !important;">
+	            <h4 class="Inbox_User">{{thread.friendly_name}}</h4>
+	 			<p class="last_msg_date">{{thread.last_message_date | date}}</p>
+	 			<p class="last_msg_date" style="margin-top: 13px;">{{thread.last_message_date | date:"hh:mm a"}}</p>
+				<p class="inbox_lastmessage">{{thread.last_message}}</p>
+	          </div>
+	        </div>
+	    </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

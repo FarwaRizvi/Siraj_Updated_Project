@@ -1,0 +1,57 @@
+<ion-view view-title="PROFILE" >
+  <ion-content>
+
+      <div class="profile_head">
+          <div class="profile_img"></div>
+      </div>
+      <div class="profile_name">
+          <h4 class="main-text-color">{{user.local.firstname}} {{user.local.lastname}}</h4>
+          <!--<p>Ui \ Ux Designer</p>-->
+      </div>
+
+      <div class="profile_det padding">
+        <ion-list>
+            <ion-item class="item-icon-left">
+                <div class="row">
+                    <div class="col col-50 item_text" ng-click="goto('/app/favourites')">
+                        <i class="icon ion-heart main-text-color"></i>FAVOURITES
+                    </div>
+                    <!--<div class="col col-50 item_no">-->
+                        <!--<span class="no-item main-text-color">5</span>items-->
+                    <!--</div>-->
+                </div>
+            </ion-item>
+            <ion-item class="item-icon-left">
+                <div class="row">
+                    <div class="col col-50 item_text" ng-click="goto('/app/cart')">
+                        <i class="icon ion-bag main-text-color"></i>MY ADS
+                    </div>
+                    <!--<div class="col col-50 item_no">-->
+                        <!--<span class="no-item main-text-color">6</span>items-->
+                    <!--</div>-->
+                </div>
+            </ion-item>
+            <ion-item class="item-icon-left" ng-click="goto('/app/settings')">
+                <i class="icon ion-ios-gear main-text-color" ></i>SETTINGS
+            </ion-item>
+            <!--<ion-item class="item-icon-left"  ng-click="goto('/app/payment')">-->
+                <!--<i class="icon ion-home main-text-color"></i>ADDRESS INFO-->
+            <!--</ion-item>-->
+          <!--<ion-item class="item-icon-left"  ng-click="goto('/app/payment')">-->
+            <!--<i class="icon ion-card main-text-color"></i>PAYMENT INFO-->
+          <!--</ion-item>-->
+
+
+
+
+
+
+        </ion-list>
+      </div>
+
+      <!--<div class="following_no">-->
+          <!--<h4 class="main-text-color"><span>325</span>FOLLOWING STORES</h4>-->
+      <!--</div>-->
+
+  </ion-content>
+</ion-view>

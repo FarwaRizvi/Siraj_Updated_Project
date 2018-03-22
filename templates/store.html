@@ -1,0 +1,30 @@
+<ion-view view-title="STORES">
+    
+  <ion-content class="store_content">
+      
+    
+      
+    <a href="#/app/details" collection-repeat="item in store_list"
+    collection-item-width="100%"
+    collection-item-height="250">
+        
+        <div class="store_head animated slideInUp" style="background: url({{item.bg}})no-repeat;background-size:cover">
+            
+            <div class="store_icon main-bg-color">
+                <i class="ion-heart"></i>
+            </div>
+            <div class="store_title">
+                <div class="brand_logo">
+                    <img src="{{item.logo}}" class="animated zoomIn infinite" />
+                </div>
+                <div class="collection_year">
+                    <p class=""><span>2016</span>VIEW COLLECTION</p>
+                </div>
+                
+            </div>
+           
+        </div>
+    </a>
+      
+  </ion-content>
+</ion-view>

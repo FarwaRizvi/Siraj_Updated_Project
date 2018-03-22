@@ -1,0 +1,37 @@
+<ion-header-bar  class="register_head">
+  <div class="buttons main-bg-color">
+    <button class="button" ng-click="goto('/login')">
+        <i class="icon ion-ios-arrow-thin-left"></i>
+    </button>
+  </div>
+  <h1 class="title title-center">SIGNUP</h1>
+</ion-header-bar>
+
+  <ion-content class="register_content main_bg content_position">
+
+    <div class="form-app animated slideInUp">
+        <label class="item item-input">
+            <input type="text" placeholder="First Name" ng-model="firstName">
+        </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Last Name" ng-model="lastName">
+      </label>
+        <label class="item item-input">
+            <input type="text" placeholder="Email" ng-model="email">
+        </label>
+        <label class="item item-input">
+            <input type="password" placeholder="Password" ng-model="password">
+        </label>
+        <label class="item item-input">
+            <input type="password" placeholder="Retype Password" ng-model="rePassword">
+        </label>
+    </div>
+
+    <a class="button button-block main-btn" ng-click="signUp(firstName,lastName,email,password,rePassword)">SIGN UP</a>
+    <h4 class="have-account">
+        ALREADY HAVE AN ACCOUNT ? <a href="#/signin" class="sign main-text-color">SIGN IN </a>
+    </h4>
+
+
+  </ion-content>
+

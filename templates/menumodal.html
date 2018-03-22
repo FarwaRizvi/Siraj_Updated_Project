@@ -1,0 +1,69 @@
+<ion-modal-view class="menu_modal animated fadeInLeft" cache-view="false">
+ <!--    <ion-header-bar  class="search_header">
+       <div class="row search">
+           <div class="col col-20">
+             <button class="button button-clear button-icon">
+                <i class="ion-search  main-text-color"></i>
+             </button>
+           </div>
+
+           <div class="col col-80">
+           <label class="item item-input">
+                <input type="search" placeholder="Search" ng-model="SearchMenu">
+            </label>
+           </div>
+        </div>
+    </ion-header-bar> -->
+
+    <ion-content class="menu_content">
+
+
+
+        <ion-list class="menu-list">
+
+            <ion-item href="#/app/hot_deals" ng-click="closemenumodal()">
+                HOME
+            </ion-item>
+
+            <ion-item href="#/app/categories" ng-click="closemenumodal()">
+                CATEGORIES
+            </ion-item>
+            <!--<ion-item href="#/app/store" ng-click="closemenumodal()">-->
+                <!--COLLECTIONS AND STORES-->
+            <!--</ion-item>-->
+            <!--<ion-item href="#/app/filter_list" ng-click="closemenumodal()">-->
+                <!--FILTER CATEGORIES-->
+            <!--</ion-item >-->
+          <ion-item href="#/app/near_by"  ng-click="closemenumodal()">
+            NEAR BY
+          </ion-item>
+
+            <ion-item href="#/app/post_ad" ng-show="isUserLoggedIn" ng-click="closemenumodal()">
+               POST AD
+            </ion-item>
+
+          <ion-item href="#/app/cart" ng-show="isUserLoggedIn" ng-click="closemenumodal()">
+            MY ADS
+          </ion-item>
+
+            <ion-item href="#/app/profile" ng-show="isUserLoggedIn" ng-click="closemenumodal()">
+                PROFILE
+            </ion-item>
+
+            <ion-item href="#/app/inbox" ng-show="isUserLoggedIn"  ng-click="closemenumodal()">
+                INBOX
+            </ion-item>
+
+            <ion-item href="#/login" ng-show="isUserLoggedIn"  ng-click="logoutmenumodal()">
+                LOGOUT
+            </ion-item>
+
+            <ion-item href="#/signin" ng-show="!isUserLoggedIn" ng-click="signinmodal()">
+                SIGNIN
+            </ion-item>
+
+        </ion-list>
+
+
+    </ion-content>
+  </ion-modal-view>

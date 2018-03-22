@@ -1,0 +1,71 @@
+<ion-view view-title="FAVOURITES" >
+  <ion-content>
+
+    <span class="Span_Search2 main_bg">
+        <label > 
+            <i class="ion-search Search_Icon"></i> 
+            <input class="Span_SearchBar" ng-model="Fav_SearchText" style="width:93% !important;">
+        </label>
+    </span>
+
+    <ion-list class="cart_list">
+      <ion-item ng-repeat="item in myFav | filter:Fav_SearchText">
+        <div class="row cart_content">
+          <div class="col col-25 item_cart_img animated zoomIn" style="background:url({{item.imagesPath[0]}})no-repeat;background-size:cover"></div>
+          <div class="col col-mid" ng-click="goto('/app/details/'+item._id)">
+            <h4 class="item_cart_title">{{item.product_name}}</h4>
+            <p class="item_cart_price main-text-color">{{item.product_price}}</p>
+            <!--<div class="row count">-->
+            <!--<div class="col col-33">-->
+            <!--<button class="button button-icon increase" ng-click="decrement(item.count,$index)">-->
+            <!--&lt;!&ndash;<i class="ion-minus"></i>&ndash;&gt;-->
+            <!--</button>-->
+            <!--</div>-->
+            <!--<div class="col col-33">-->
+            <!--<label class="item-input count_no">-->
+            <!--<input type="text" value="{{item.count}}">-->
+            <!--</label>-->
+            <!--</div>-->
+            <!--<div class="col col-33">-->
+            <!--<button class="button button-icon increase" ng-click="increment(item.count,$index)">-->
+            <!--&lt;!&ndash;<i class="ion-plus"></i>&ndash;&gt;-->
+            <!--</button>-->
+            <!--</div>-->
+            <!--</div>-->
+          </div>
+          <div class="col col-20 delete-icon">
+            <button class="button button-icon" ng-click="removeItem($index,item._id)"><i class="ion-android-cancel"></i></button>
+          </div>
+          <!--<div class="col col-20 delete-icon">-->
+            <!--<button class="button button-icon" ng-click="goto('/app/productEdit/'+item._id)"><i class="ion-edit"></i></button>-->
+
+          <!--</div>-->
+          <!--<div class="col col-20 delete-icon">-->
+            <!--<button class="button button-icon" ng-click="goto('/app/featureAd/'+item._id)"><i class="ion-pin"></i></button>-->
+
+          <!--</div>-->
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <!--<div class="total_price padding">-->
+    <!--<div class="row">-->
+    <!--<div class="col col-50">-->
+    <!--<p>TOTAL<span class="prices">480.00 $</span></p>-->
+    <!--</div>-->
+    <!--<div class="col col-50 apply">-->
+    <!--<h4>APPLY<span>COUPON</span></h4>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="cart_main_btn">-->
+    <!--<button class="button button-block main-bg-color main-btn">-->
+    <!--EMPTY CART-->
+    <!--</button>-->
+    <!--<button class="button button-block main-btn" ng-click="goto('/app/payment')">-->
+    <!--SAVE COMPLETE ORDER-->
+    <!--</button>-->
+    <!--</div>-->
+  </ion-content>
+</ion-view>

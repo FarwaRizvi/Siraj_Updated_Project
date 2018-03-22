@@ -1,0 +1,21 @@
+<ion-modal-view class="signin_modal">
+    <ion-content class="sign_content main_bg" scroll="false">
+        
+        <div class="form-app">
+            <label class="item item-input">
+                <input type="text" placeholder="User Name">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password">
+            </label>
+            <p class="for_psw" ng-click="forget_password()">Forget Password??</p>
+        </div>
+        
+        
+        
+        <button class="button button-block main-btn" ng-click="goto('/welcome_page');closesigninmodal()">
+            SIGN IN
+        </button>
+             
+    </ion-content>
+  </ion-modal-view>

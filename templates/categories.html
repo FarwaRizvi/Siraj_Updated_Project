@@ -1,0 +1,30 @@
+<ion-view view-title="CATEGORIES">
+
+
+  <ion-content class="categories_content ">
+
+
+
+    <div  collection-repeat="item in categories"
+    collection-item-width="50%"
+    collection-item-height="220">
+
+        <div class="list_content">
+            <div class="list_img_bg" ng-click="goto('/app/filter_list/'+item._id)">
+                <div class="list_img animated flipInY" style="background:url({{item.img}});background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain"></div>
+            </div>
+            <div class="list_details padding">
+                <h4>{{item.product_category_name | uppercase}}</h4>
+                <p class="price main-text-color">{{item.price}}
+                    <i ng-click="likeItem(item)" ng-if="!item.fav" class="ion-ios-heart-outline main2-text-color"></i>
+                    <i ng-click="likeItem(item)" ng-if="item.fav" class="ion-ios-heart main2-text-color"></i>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+  </ion-content>
+</ion-view>

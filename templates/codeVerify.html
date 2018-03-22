@@ -1,0 +1,82 @@
+<ion-modal-view class="update_modal">
+
+  <ion-header-bar class="modal_head">
+    <div class="row sorted">
+      <div class="col col-80 col-search">
+        <!--<div class="row search">-->
+        <!--<div class="col col-20">-->
+        <!--<button class="button button-clear button-icon">-->
+        <!--<i class="ion-search  main-text-color"></i>-->
+        <!--</button>-->
+        <!--</div>-->
+        <!--<div class="col col-80">-->
+        <!--<label class="item item-input">-->
+        <!--<input type="text" placeholder="Search">-->
+        <!--</label>-->
+        <!--</div>-->
+        <!--</div>-->
+      </div>
+      <div class="col col-20">
+        <span class="close-icon" ng-click="closeModal()"><i class="icon ion-android-close main2-text-color"></i></span>
+      </div>
+      <!--<div class="col col-80 col-search">-->
+      <!--<div class="row search">-->
+      <!--<div class="col col-20">-->
+      <!--<button class="button button-clear button-icon">-->
+      <!--<i class="ion-search  main-text-color"></i>-->
+      <!--</button>-->
+      <!--</div>-->
+      <!--<div class="col col-80">-->
+      <!--<label class="item item-input">-->
+      <!--<input type="text" placeholder="Search">-->
+      <!--</label>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--</div>-->
+    </div>
+  </ion-header-bar>
+  <ion-content   overflow-scroll="false">
+    <div class="list list-inset">
+      <div class="row" style="width:50%; margin-right: auto ; margin-left: auto ; padding: 2px">
+        <!--<input type="text" class="inputs" data-maxlength="4">-->
+        <!--<input type="text" class="inputs" data-maxlength="4">-->
+        <!--<input type="text" class="inputs" data-maxlength="4">-->
+        <!--<input type="text" class="inputs" data-maxlength="4">-->
+
+
+        <!--<input type="number"  ng-model="myObject.part1" maxlength="1" move-next-on-maxlength />-->
+        <!--<input type="text"  ng-model="myObject.part2" maxlength="1" move-next-on-maxlength />-->
+        <!--<input type="text"  ng-model="myObject.part2" maxlength="1" move-next-on-maxlength />-->
+
+        <!---->
+        <!--<input type="text"  ng-model="myObject.part2" maxlength="1"/>-->
+
+          <input type="number" maxlength="1" ng-model="a"  min="0" max="9" move-next-on-maxlength style="border: 1px solid lightgray; text-align: center">
+        <input type="number" maxlength="1" min="0" ng-model="b" max="9" move-next-on-maxlength style="border: 1px solid lightgray; text-align: center">
+
+        <input type="number" maxlength="1" min="0" max="9" ng-model="c" move-next-on-maxlength style="border: 1px solid lightgray; text-align: center">
+        <input type="number" maxlength="1" min="0" max="9" ng-model="d" move-next-on-maxlength style="border: 1px solid lightgray ; text-align: center">
+
+        <!--<input type="number" name="abc"class="inputs" data-maxlength="4" style="border: 1px solid lightgray">-->
+        <!--<input type="number" name="abc"class="inputs" data-maxlength="4" style="border: 1px solid lightgray">-->
+        <!--<input type="number" name="abc"class="inputs" data-maxlength="4" style="border: 1px solid lightgray">-->
+
+        <!--<input type="number" name="abc" min="0" max="9" style="border:  1px solid lightgray">-->
+          <!--<input type="number" name="abc" min="0" max="9" style="border:  1px solid lightgray">-->
+          <!--<input type="number" name="abc" min="0" max="9" style="border:  1px solid lightgray">-->
+
+
+      </div>
+
+    </div>
+
+    <ion-footer-bar class="footer modal_footer">
+      <button class="button button-block main-btn" ng-click="closeCodeVerifyModal(a,b,c,d)">
+        VERFIY
+      </button>
+    </ion-footer-bar>
+
+  </ion-content>
+
+</ion-modal-view>
+

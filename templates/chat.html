@@ -1,0 +1,55 @@
+<ion-view view-title={{name}}>
+  <ion-content class="Chat_content main_bg" delegate-handle="mainScroll">
+  	
+    <ion-list style="padding:2px 5px 60px 5px !important;position:relative;">
+	    <ion-item ng-repeat="msg in MessagesData.messages" style="margin:0px;padding:0px;border-color:transparent !important; background-color:transparent !important;" ng-if="(msg.body!=='')">
+
+	        <div class="row row_display" ng-if="msg.from===name">
+	        	<div class="message_div_u">
+	          		<p class="message_u"> 
+	          			{{msg.body}}
+	          		</p>
+	          		<div class="date_time">
+	          			<p class="msg_date"> {{msg.date_created | date }} </p>
+	          			<p class="msg_time"> {{msg.date_created | date:"hh:mm a"}} </p>
+	          		</div>
+	          	</div>
+	        </div>
+	        
+	        <div class="row row_display" ng-if="(msg.from==='system')">
+	          	<p class="message_system"> 
+	          		{{msg.body}}
+	          	</p>
+	        </div>
+	        
+	        <div class="row row_display" ng-if="(msg.from!=='system' && msg.from!==name)">
+	        	<div class="message_div_i">
+	          		<p class="message_i"> 
+	          			{{msg.body}}
+	          		</p>
+	          		<div class="date_time">
+	          			<p class="msg_date"> {{msg.date_created | date }} </p>
+	          			<p class="msg_time"> {{msg.date_created | date:"hh:mm a"}} </p>
+	          		</div>
+	          	</div>
+	        </div>
+	    </ion-item>
+    </ion-list>
+  </ion-content>
+
+    <ion-footer>
+  	<div class="message_text_div">
+
+ 		<div style="margin-left:40px;margin-right:40px;margin-top:10px;">
+	        <textarea rows="1" placeholder="Type your message here." ng-keyup="expandText()" ng-keydown="expandText()" ng-model="msg"></textarea>
+    	</div>
+
+    	<button class="button button-icon message_image_button" ng-click="">
+	            	<i class="ion-image"></i>
+	    </button>
+	    <button class="button button-icon message_send_button" ng-click="Submit(msg)">
+	            	<i class="ion-android-send"></i>
+	    </button>
+    </div>
+  </ion-footer>
+</ion-view>

@@ -1,0 +1,103 @@
+<ion-view view-title="FILTER CATEGORIES" >
+  <div class="bar bar-subheader">
+    <div class="row list_btn">
+      <div class="col col-50" ng-click="opensortmodal()">
+        <button class="sort-btn sorted-icon"><i class="ion-arrow-swap main-text-color sort-icon"></i>SORTED BY</button>
+      </div>
+      <div class="col col-50" ng-click="opensearchmodal()">
+        <button class="sort-btn"><i class="ion-search main-text-color"></i>SEARCH</button>
+      </div>
+      <!-- <div class="col col-50">
+        <button class="sort-btn"><i class="ion-search main-text-color"></i>SEARCH</button>
+      </div> -->
+    </div>
+  </div>
+
+
+  <ion-content class="filter_content has-subheader">
+    <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="doRefresh()">
+    </ion-refresher>
+
+
+    <!--<ion-list>-->
+        <!--<div ng-repeat="group in groups">-->
+          <!--<ion-item class="item-stable item-icon-right animated slideInUp"-->
+                    <!--ng-click="toggleGroup(group)"-->
+                    <!--ng-class="{active: isGroupShown(group)}">-->
+              <!--<i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>-->
+            <!--&nbsp;-->
+             <!--{{group.name}}-->
+          <!--</ion-item>-->
+          <!--<ion-item class="item-accordion"-->
+                    <!--ng-repeat="item in group.items"-->
+                    <!--ng-show="isGroupShown(group)">-->
+              <!--<input type="checkbox" name="check" id="r{{item.subId}}">-->
+                <!--<label for="r{{item.subId}}"> <span></span>{{item.subId}}-->
+                <!--</label>-->
+
+          <!--</ion-item>-->
+        <!--</div>-->
+      <!--</ion-list>-->
+
+    <span class="Span_Search" ng-if='Search===true'>
+          <label > 
+              <i class="ion-search Search_Icon"></i> 
+              <input class="Span_SearchBar" ng-model="searchText">
+              <i class="icon ion-android-close Search_Icon" style="right:10px;"></i> 
+          </label>
+    </span>
+
+    <ion-list class="cart_list">
+
+      <ion-item ng-repeat="item in filterList| filter:searchText ">
+      <!-- <ion-item ng-repeat="item in filterList | orderBy:'product_price' "> -->
+        <div class="row cart_content" ng-click="goto('/app/details/'+item._id)">
+          <div class="col col-25 item_cart_img animated zoomIn" style="background:url({{item.imagesPath[0]}})no-repeat;background-size:cover;border: 1px solid #252f63;"></div>
+          <div class="col col-mid"  >
+            <h4 class="item_cart_title" href="#/app/details">{{item.product_name}}</h4>
+            <p class="item_cart_price main-text-color">{{item.product_price}}</p>
+            <!--<div class="row count">-->
+            <!--<div class="col col-33">-->
+            <!--<button class="button button-icon increase" ng-click="decrement(item.count,$index)">-->
+            <!--&lt;!&ndash;<i class="ion-minus"></i>&ndash;&gt;-->
+            <!--</button>-->
+            <!--</div>-->
+            <!--<div class="col col-33">-->
+            <!--<label class="item-input count_no">-->
+            <!--<input type="text" value="{{item.count}}">-->
+            <!--</label>-->
+            <!--</div>-->
+            <!--<div class="col col-33">-->
+            <!--<button class="button button-icon increase" ng-click="increment(item.count,$index)">-->
+            <!--&lt;!&ndash;<i class="ion-plus"></i>&ndash;&gt;-->
+            <!--</button>-->
+            <!--</div>-->
+            <!--</div>-->
+          </div>
+
+        </div>
+
+      </ion-item>
+
+    </ion-list>
+
+
+    <ion-infinite-scroll ng-if="loadCheck" on-infinite="loadMore()" distance="1%"> </ion-infinite-scroll>
+
+
+
+
+
+
+
+  </ion-content>
+
+ <!-- <ion-footer-bar class="det_footer">
+    <button class="button button-block main-btn" ng-click="goto('/app/categories')">
+           <!--ACTIVATION
+    <!--</button>-->
+
+<!-- </ion-footer-bar>  -->
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button class="button button-icon button-clear back_btn" >
+          <i class="icon ion-ios-arrow-thin-left"></i>
+      </ion-nav-back-button>
+
+       <!--<ion-nav-buttons side="right">-->
+            <!--<button class="button cart_btn" ng-click="goto('/app/cart')">-->
+                <!--<i class="ion-android-cart main-text-color"></i>-->
+                <!--<span class="badge main-bg-color">6</span>-->
+            <!--</button>-->
+        <!--</ion-nav-buttons>-->
+
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon main-bg-color" menu-toggle="left" style="display:block;height: 50px;
+    min-height: 50px" ng-click="openmenumodal()">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" ></ion-nav-view>
+  </ion-side-menu-content>
+
+
+</ion-side-menus>

@@ -1,0 +1,268 @@
+<ion-view view-title="HOME" >
+  <ion-content >
+
+    <div class="home_content animated slideInUp" delegate-handle="mainScroll">
+        <div class="home-head" ng-click="goto('/app/near_by')">
+            <div class="img-title main1-bg-opacity-color">
+                    <p><h4>Near By</h4></p>
+                    <i class="icon ion-android-location"></i>
+            </div>
+        </div>
+
+
+
+        <ion-refresher
+          pulling-text="Pull to refresh..."
+          on-refresh="doRefresh()">
+        </ion-refresher>
+      <!--<div class="row gallery" ng-repeat="bikes in homeProductsBikes.products">-->
+        <!--<div class="home-section col col-50" ng-click="goto('/app/details')">-->
+            <!--<div class="sec-color main2-bg-opacity-color">-->
+                <!--<div class="title-price">-->
+                    <!--<p>{{bikes.product_name}}</p>-->
+                    <!--<h4>{{bikes.product_price}}<i class="icon ion-heart"></i></h4>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<div class="home-section col col-50" ng-click="goto('/app/categories')">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="sec-color main2-bg-opacity-color">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="title-price">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<p>Shorts & Skirts</p>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<h4>300 $<i class="icon ion-heart"></i></h4>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="home-section col col-50" ng-click="goto('/app/categories')">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="sec-color main2-bg-opacity-color">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="title-price">&ndash;&gt;-->
+              <!--&lt;!&ndash;<p>Shorts & Skirts</p>&ndash;&gt;-->
+              <!--&lt;!&ndash;<h4>300 $<i class="icon ion-heart"></i></h4>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+
+
+
+
+      <!--</div>-->
+      <!--<div class="row gallery" ng-repeat="bikes in homeProductsMobiles.products">-->
+        <!--<div class="home-section col col-50" ng-click="goto('/app/details')">-->
+          <!--<div class="sec-color main2-bg-opacity-color">-->
+            <!--<div class="title-price">-->
+              <!--<p>{{bikes.product_name}}</p>-->
+              <!--<h4>{{bikes.product_price}}<i class="icon ion-heart"></i></h4>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+
+
+<!--</div>-->
+
+      <!--<div class="row gallery" ng-repeat="bikes in homeProductsVehicles.products">-->
+        <!--<div class="home-section col col-50" ng-click="goto('/app/details')">-->
+          <!--<div class="sec-color main2-bg-opacity-color">-->
+            <!--<div class="title-price">-->
+              <!--<p>{{bikes.product_name}}</p>-->
+              <!--<h4>Rs {{bikes.product_price}}</h4>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="row gallery" ng-repeat="bikes in homeProductsElectronics.products">-->
+          <!--<div class="home-section col col-50" ng-click="goto('/app/details')">-->
+            <!--<div class="sec-color main2-bg-opacity-color">-->
+              <!--<div class="title-price">-->
+                <!--<p>{{bikes.product_name}}</p>-->
+                <!--<h4>{{bikes.product_price}}<i class="icon ion-heart"></i></h4>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+      <div ng-repeat="cat in homePage">
+      <div style="color:#0b315a;text-transform:capitalize;background-color:#ffffff;padding:15px 7px 0px 7px;font-size:18px;font-weight:bold;">
+        <div style="display:inline-flex;float:left;padding:4px;">
+          {{cat.categoryname}}
+        </div>
+        <div style="display:inline-flex;float:right;background:#0c65a7;padding:4px 14px;font-size:15px;font-family:sans-serif;">
+          <a style="float: right; color:#eff3fc;" ng-click="goto('/app/filter_list/'+cat.products[0]._product_category_id)">View More</a>
+        </div>
+      </div>
+
+        <ion-scroll direction="x"  zooming="false" delegate-handle="horizontal" horizontal-scroll-fix="mainScroll" style="width: 100%;">
+          <div class="row">
+            <div class="col-47" ng-repeat="bikes in cat.products">
+              <div class=" card " ng-click="goto('/app/details/'+bikes._id)" style="box-shadow: 0px 2px 11px #89939e;" >
+
+                  <div class="item item-image thumbnail">
+                      <img src="{{bikes.imagesPath[0]}}" >
+                      <div class="ribbon">
+                        <div class="txt">Featured</div>
+                      </div>
+                  </div>
+
+                <div class="item " style="padding: 5px;">
+
+                  <!--<h2>Pretty H</h2>-->
+                  <p style="color:#474a4a;font-weight: bold;padding:0px 2px 0px 2px;font-size:15px;">
+                    {{bikes.product_name | uppercase}}
+                  </p>
+                  <p style="font-size:15px;color:#474a4a;padding:0px 2px 0px 2px;">
+                    {{bikes.product_price}} Rs.
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+
+
+            <!--<div class="col col-50 homeProduct"  ng-repeat="bikes in homeProductsBikes.products">-->
+             <!--<div class="title-price" ng-click="goto('/app/details/'+bikes._id)">-->
+
+               <!--<img ng-src="{{bikes.imagesPath[0] || loading}}" style="height: 100px; width: 100px; object-fit:contain ;">-->
+
+               <!--<p>{{bikes.product_name}}</p>-->
+               <!--<h4>{{bikes.product_price}}</h4>-->
+
+             <!--</div>-->
+
+             <!--</div>-->
+          </div>
+  </ion-scroll>
+      </div>
+
+
+    
+<!--       <div class="item item-divider" style="color:white ; background-color: #303030">
+       Electronics
+      </div>
+      <ion-scroll  direction="x"  zooming="false" delegate-handle="horizontal" horizontal-scroll-fix="mainScroll">
+        <div class="row">
+          <div class="col-50" ng-repeat="bikes in homeProductsBikes.products">
+            <div class=" card" ng-click="goto('/app/details/'+bikes._id)" style="background-color: cornsilk" >
+
+              <div class="item " style="padding: 5px;">
+
+                <!--<h2>Pretty H</h2>-->
+           <!--      <p style="text-align: center ; ">{{bikes.product_name | uppercase}}</p>
+              </div>
+
+              <div class="item item-image thumbnail">
+                <img src="{{bikes.imagesPath[0]}}">
+              </div>
+
+              <a class="item  assertive" >
+                <i class="icon ion-cash"></i>
+                Rs {{bikes.product_price}}
+              </a>
+
+            </div>
+
+          </div>
+ -->
+
+          <!--<div class="col col-50 homeProduct"  ng-repeat="bikes in homeProductsBikes.products">-->
+          <!--<div class="title-price" ng-click="goto('/app/details/'+bikes._id)">-->
+
+          <!--<img ng-src="{{bikes.imagesPath[0] || loading}}" style="height: 100px; width: 100px; object-fit:contain ;">-->
+
+          <!--<p>{{bikes.product_name}}</p>-->
+          <!--<h4>{{bikes.product_price}}</h4>-->
+
+          <!--</div>-->
+
+          <!--</div>-->
+<!--         </div>
+      </ion-scroll>
+      <div class="item item-divider" style="color:white ; background-color: #303030">
+        Vehicles
+      </div>
+      <ion-scroll direction="x">
+        <div class="row">
+          <div class="col-50" ng-repeat="bikes in homeProductsBikes.products">
+            <div class=" card" ng-click="goto('/app/details/'+bikes._id)" >
+
+              <div class="item " style="padding: 5px;">
+
+                <h2>Pretty H</h2>
+                <p style="text-align: center ; ">{{bikes.product_name | uppercase}}</p>
+              </div>
+
+              <div class="item item-image thumbnail">
+                <img src="{{bikes.imagesPath[0]}}">
+              </div>
+
+              <a class="item  assertive" >
+                <i class="icon ion-cash"></i>
+                Rs {{bikes.product_price}}
+              </a>
+
+            </div>
+
+          </div> -->
+
+
+          <!--<div class="col col-50 homeProduct"  ng-repeat="bikes in homeProductsBikes.products">-->
+          <!--<div class="title-price" ng-click="goto('/app/details/'+bikes._id)">-->
+
+          <!--<img ng-src="{{bikes.imagesPath[0] || loading}}" style="height: 100px; width: 100px; object-fit:contain ;">-->
+
+          <!--<p>{{bikes.product_name}}</p>-->
+          <!--<h4>{{bikes.product_price}}</h4>-->
+
+          <!--</div>-->
+
+          <!--</div>-->
+    <!--     </div>
+      </ion-scroll>
+
+      <div class="item item-divider" style="color:white ; background-color: #303030">
+        Mobiles
+      </div>
+      <ion-scroll direction="x">
+        <div class="row">
+          <div class="col-50" ng-repeat="bikes in homeProductsBikes.products">
+            <div class=" card" ng-click="goto('/app/details/'+bikes._id)" >
+
+              <div class="item " style="padding: 5px;">
+
+                <h2>Pretty H</h2>
+                <p style="text-align: center ; ">{{bikes.product_name | uppercase}}</p>
+              </div>
+
+              <div class="item item-image thumbnail">
+                <img src="{{bikes.imagesPath[0]}}">
+              </div>
+
+              <a class="item  assertive" >
+                <i class="icon ion-cash"></i>
+                Rs {{bikes.product_price}}
+              </a>
+
+            </div>
+
+          </div>
+ -->
+
+          <!--<div class="col col-50 homeProduct"  ng-repeat="bikes in homeProductsBikes.products">-->
+          <!--<div class="title-price" ng-click="goto('/app/details/'+bikes._id)">-->
+
+          <!--<img ng-src="{{bikes.imagesPath[0] || loading}}" style="height: 100px; width: 100px; object-fit:contain ;">-->
+
+          <!--<p>{{bikes.product_name}}</p>-->
+          <!--<h4>{{bikes.product_price}}</h4>-->
+
+          <!--</div>-->
+
+          <!--</div>-->
+  <!--       </div>
+
+      </ion-scroll> --> 
+
+        <!--<button class="button button-block main-btn" ng-click="goto('/app/categories')">-->
+            <!--SKIP-->
+        <!--</button>-->
+</div>
+  </ion-content>
+</ion-view>

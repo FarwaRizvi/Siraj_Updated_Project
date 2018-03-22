@@ -1,0 +1,124 @@
+<ion-view view-title="PAYMENT INFO">
+
+  <ion-content class="payment_content">
+
+     <div ng-if="show_step!=1">
+
+
+      <div class="form_payment padding">
+          <h4 class="main-text-color">1 / 3</h4>
+
+
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">FULL NAME</span>
+                <input type="text" placeholder="DANNY WINSLETTE" ng-disabled="true">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">ADDRESS LINE 1</span>
+                <input type="text" placeholder="2659 WALLSTREET SECOND FLOOR" ng-model="address">
+            </label>
+            <!--<label class="item item-input item-stacked-label">-->
+                <!--<span class="input-label">ADDRESS LINE 2</span>-->
+                <!--<input type="text" placeholder="26 WALLSTREET - FLORIDA FIRST FLOOR">-->
+            <!--</label>-->
+            <label class="item item-input item-stacked-label">
+                <div class="row">
+                    <div class="col col-50">
+                        <span class="input-label">CITY</span>
+                        <input type="text" placeholder="HIGHWAY" ng-model="city">
+                    </div>
+                    <div class="col col-50">
+                        <span class="input-label">STATE</span>
+                        <input type="text" placeholder="FLORIDA" ng-model="state">
+                    </div>
+                </div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <div class="row">
+                    <div class="col col-50">
+                        <span class="input-label">COUNTRY</span>
+                        <input type="text" placeholder="USA" ng-model="country">
+                    </div>
+                    <div class="col col-50">
+                        <span class="input-label">ZIP CODE</span>
+                        <input type="number" placeholder="3111" ng-model="zipCode">
+                    </div>
+                </div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">MOBILE NO.</span>
+                <input type="number" placeholder="01006922279" ng-disabled="true">
+            </label>
+        </div>
+      </div>
+</div>
+   <div ng-if="show_step==1">
+
+
+
+    <div class="form_payment padding">
+          <h4 class="main-text-color">2 / 3</h4>
+
+      <div id="dropin-container"></div>
+
+      <!--<button id="submit-button" ng-click="pay()">Request payment method</button>-->
+
+
+
+      <!--<div class="list">-->
+            <!--<label class="item item-input item-stacked-label">-->
+                <!--<div class="row">-->
+                    <!--<div class="col col-25">-->
+                        <!--<img src="img/paypol.png" />-->
+                    <!--</div>-->
+                    <!--<div class="col col-75">-->
+                        <!--<span class="input-label">PAYPAL</span>-->
+                        <!--<input type="text" placeholder="DANNY WINSLETTE">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</label>-->
+            <!--<label class="item item-input item-stacked-label">-->
+                <!--<div class="row">-->
+                    <!--<div class="col col-25">-->
+                        <!--<img src="img/visa.png" />-->
+                    <!--</div>-->
+                    <!--<div class="col col-75">-->
+                        <!--<span class="input-label">VISA</span>-->
+                        <!--<input type="number" placeholder="326 6549 3 332">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</label>-->
+            <!--<label class="item item-input item-stacked-label"></label>-->
+
+        <!--</div>-->
+        <div class="add_payment padding" id="submit-button" ng-click="pay()" >
+            <i class="ion-ios-plus-outline main-text-color"></i>
+            <h4 class="main-text-color">ADD PAYMENT METHOD</h4>
+        </div>
+
+        <div class="payment_address">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">SHIP TO</span>
+                <input type="text" placeholder="26 WALLSTREET - FLORIDA FIRST FLOOR">
+            </label>
+             <label class="item item-input item-stacked-label">
+                <span class="input-label">NOTE</span>
+                <textarea placeholder="26 WALLSTREET - FLORIDA FIRST FLOOR" rows="4" class="note"></textarea>
+            </label>
+        </div>
+                <button class="button main-bg-color back_step" ng-click="showSecondpage(2)">Back</button>
+
+      </div>
+      </div>
+  </ion-content>
+<ion-footer-bar class="det_footer">
+    <button class="button button-block main-btn" ng-click="showSecondpage(1)" ng-if="show_step!=1">
+        NEXT
+    </button>
+
+    <button class="button button-block main-btn" ng-click="opencompletemodal()" ng-if="show_step==1">
+        CONTINUE
+    </button>
+</ion-footer-bar>
+</ion-view>

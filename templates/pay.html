@@ -1,0 +1,34 @@
+<ion-view>
+  <ion-content>
+    <div id="dropin-container"></div>
+    <button id="submit-button">Purchase</button>
+
+    <script src="https://js.braintreegateway.com/web/dropin/1.8.1/js/dropin.min.js"></script>
+
+    <script>
+      var submitButton = document.querySelector('#submit-button');
+
+      braintree.dropin.create({
+        authorization: 'CLIENT_AUTHORIZATION',
+        container: '#dropin-container'
+      }, function (err, dropinInstance) {
+        console.log("braintree")
+        if (err) {
+          // Handle any errors that might've occurred when creating Drop-in
+          console.error(err);
+          return;
+        }
+        submitButton.addEventListener('click', function () {
+          console.log("button")
+          dropinInstance.requestPaymentMethod(function (err, payload) {
+            if (err) {
+              // Handle errors in requesting payment method
+            }
+
+            // Send payload.nonce to your server
+          });
+        });
+      });
+    </script>
+  </ion-content>
+</ion-view>

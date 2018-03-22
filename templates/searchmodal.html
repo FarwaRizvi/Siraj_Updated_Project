@@ -1,0 +1,32 @@
+<ion-modal-view class="sort_modal" style="height:20%;">
+     
+    <ion-header-bar class="modal_head">
+        <div class="row sorted">
+             <div class="col col-80 col-search">
+                <div class="row search">
+                    <div class="col col-20">
+                        <button class="button button-clear button-icon">
+                            <i class="ion-search  main-text-color"></i>
+                        </button>
+                    </div> 
+                    <div class="col col-80">
+                        <label class="item item-input">
+                        <input type="text" placeholder="Search" ng-model="searching">
+                        </label>
+                    </div>         
+                </div>
+             </div>
+             <div class="col col-20">
+                 <span class="close-icon" ng-click="closesearchmodal2()"><i class="icon ion-android-close main2-text-color"></i></span>
+             </div>    
+        </div>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        
+    </ion-content>
+     <ion-footer-bar class="footer modal_footer">
+        <button class="button button-block main-btn" ng-click="closesearchmodal(searching)">
+        APPLY
+        </button>
+    </ion-footer-bar>
+  </ion-modal-view>
